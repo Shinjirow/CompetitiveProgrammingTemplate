@@ -22,19 +22,17 @@
 #include <iomanip>
 
 #define int long long
-#define REP(i,a,n) for(int i=a;i<n;++i)
-#define rep(i,n) REP(i,0,n)
-#define REV(i,a,n) for(int i=n;i>=a;--i)
+#define REP(i,l,r) REPEAT(i,l,r,true) //[l, r)
+#define rep(i,n) REP(i,0,n)           //[0, n)
+#define REPEAT(i,l,r,condition) for(int i=(condition)?l:r-1;(condition)?i<r:i>=l;(condition)?++i:--i) // false<-[l, r)->true
 #define all(e) e.begin(),e.end()
 #define rall(e) e.rbegin(),e.rend()
 #define pb push_back
-#define mp make_pair
 #define fs first
 #define sc second
-#define show(n) cerr<<#n<<" = "<<n<<endl
-#define showp(n) cerr<<n.fs<<", "<<n.sc<<endl
+#define show(...) cerr<<#__VA_ARGS__<<" = ";_DEBUG(__VA_ARGS__)
 #define shows(n) for(auto z:n){cerr<<z<<", ";}cerr<<endl
-#define showsp(n) for(auto z:n){cerr<<z.fs<<" "<<z.sc<<", "}cerr<<endl
+#define showslr(n,l,r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i];}cerr<<endl //[l, r))
 
 #define yes puts("Yes")
 #define no puts("No")
@@ -46,15 +44,25 @@ using vi=vector<int>;
 using pint=pair<int,int>;
 
 inline void io(){cin.tie(0);ios::sync_with_stdio(false);cout.tie(0);cout<<fixed<<setprecision(20);}
-inline int  in(){int n;scanf("%lld",&n);return n;}
-inline void out(int n){printf("%lld\n",n);}
+
+void _DEBUG(){cerr<<endl;}
+template<typename H,typename... T> void _DEBUG(H a,T...b){cerr<<a<<",";_DEBUG(b...);}
+
+template<typename T> inline void in(T &e){cin>>e;}
+template<typename H,typename... T>void in(H &a, T&... b){in(a);in(b...);}
+template<typename T> inline void out(T e){cout<<e<<endl;}
+template<typename H,typename... T> void out(H a, T... b){out(a);out(b...);}
 
 const int INF=1LL<<55;
 const int MOD=1000000007;
 const double EPS=1e-8;
 
+
+
 signed main(){
     io();
+
+
 
     return 0;
 }
