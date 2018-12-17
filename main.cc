@@ -42,7 +42,7 @@ using namespace std;
 using vi=vector<int>;
 using pint=pair<int,int>;
 
-inline void io(){cin.tie(0);ios::sync_with_stdio(false);cout.tie(0);cout<<fixed<<setprecision(20);}
+struct io{io(){cin.tie(0);ios::sync_with_stdio(false);cout.tie(0);cout<<fixed<<setprecision(20);}}io;
 
 template<class T> istream& operator >>(istream &is, vector<T> &v){for(T &e:v)is>>e;return is;}
 template<class T> ostream& operator <<(ostream &os, vector<T> v){os<<"{";for(T &e:v)os<<e<<(v.size()-(int)(&e-&v[0])>1?", ":"");os<<"}";return os;}
@@ -65,7 +65,6 @@ const double EPS=1e-8;
 
 
 signed main(){
-    io();
 
 
 
