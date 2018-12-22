@@ -45,7 +45,9 @@ using pint=pair<int,int>;
 struct io{io(){cin.tie(0);ios::sync_with_stdio(false);cout.tie(0);cout<<fixed<<setprecision(20);}}io;
 
 template<class T> istream& operator >>(istream &is, vector<T> &v){for(T &e:v)is>>e;return is;}
-template<class T> ostream& operator <<(ostream &os, vector<T> v){os<<"{";for(T &e:v)os<<e<<(v.size()-(int)(&e-&v[0])>1?", ":"");os<<"}";return os;}
+template<class T> ostream& operator <<(ostream &os, vector<T> v){os<<"vector{";for(T &e:v)os<<e<<(v.size()-(int)(&e-&v[0])>1?", ":"");os<<"}";return os;}
+
+template<class T> ostream& operator <<(ostream &os, set<T> s){os<<"set[";int i=0;for(T e:s){i++;os<<e<<(i!=s.size()?", ":"");}os<<"]";return os;}
 
 void _DEBUG(){}
 template<typename H,typename... T> void _DEBUG(H a,T...b){cerr<<a<<(sizeof...(b)?",":"\n");_DEBUG(b...);}
