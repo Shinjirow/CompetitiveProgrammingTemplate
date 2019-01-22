@@ -56,7 +56,7 @@ A B C
 ```
 のような時に
 ```cpp
-int a,b,c
+int a,b,c;
 in(a,b,c);
 ```
 や，
