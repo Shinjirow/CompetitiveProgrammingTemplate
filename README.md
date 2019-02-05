@@ -34,7 +34,10 @@ rep(y,height){
 [l, r)の空間のforループで順番に出力します．
 
 #### 出力系
-`yes`で`puts("Yes")`します，`no`も同様．  
+`YN(condition)`関数は`condition`が`true`の時に`"YES"`，`false`の時に`"NO"`を出力します．  
+`Yn(condition)`は`"Yes" "No"`を出力．  
+`yn(condition)`は`"yes" "no"`を出力．  
+condなんかいらんわ！という時用に`YES` `Yes` `yes` `NO` `No` `no`でそれぞれの文字列を出力します．  
 `case(i)`はCase番号の出力が必要な時に適宜どうぞ．
 
 ---
