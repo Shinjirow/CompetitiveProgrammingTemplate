@@ -33,8 +33,16 @@
 #define show(...) cerr<<#__VA_ARGS__<<" = ";_DEBUG(__VA_ARGS__)
 #define showlr(n,l,r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i]<<", ";}cerr<<endl // [l, r)
 
-#define yes puts("Yes")
-#define no puts("No")
+#define YN(condition) puts((condition)?"YES":"NO")
+#define Yn(condition) puts((condition)?"Yes":"No")
+#define yn(condition) puts((condition)?"yes":"no")
+#define YES puts("YES")
+#define Yes puts("Yes")
+#define yes puts("yes")
+#define NO  puts("NO")
+#define No  puts("No")
+#define no  puts("no")
+
 #define case(i) printf("Case #%lld: ",i)
 
 using namespace std;
