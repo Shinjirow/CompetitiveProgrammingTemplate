@@ -93,6 +93,21 @@ out(vec);
 のような出力になります．
 
 `resz(n, ...)`関数で複数のvectorのsizeを同時にresize出来ます．  
+```cpp
+int n;
+vi a, b, c;
+
+in(n);
+resz(n, a, b, c);
+```
+みたいな利用想定．  
+
+`resize(v, ...)`関数で多次元vectorについて一気にresizeできます．(コンストラクタで頭こわれる人向け)  
+```cpp
+vector<vector<vi>> dp;
+resize(dp, 100, 5, 3);
+```
+みたいな利用想定．  
 
 ---
 ### 定数

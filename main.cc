@@ -66,6 +66,9 @@ template<typename H,typename... T> void out(H a, T... b){cout<<a<<(sizeof...(b)?
 template<class T> void resz(int n,T& v){v.resize(n);}
 template<class H,class... T> void resz(int n,H& a,T&... b){a.resize(n);resz(n,b...);}
 
+template<typename V,typename H> void resize(vector<V>& v,const H a){v.resize(a);}
+template<typename V,typename H,typename... T> void resize(vector<V>& v,const H& a,const T... b){v.resize(a);for(auto &v:v) resize(v,b...);}
+
 const int INF=1LL<<55;
 const int MOD=1000000007;
 const double EPS=1e-8;
