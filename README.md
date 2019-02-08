@@ -34,7 +34,10 @@ rep(y,height){
 [l, r)の空間のforループで順番に出力します．
 
 #### 出力系
-`yes`で`puts("Yes")`します，`no`も同様．  
+`YN(condition)`関数は`condition`が`true`の時に`"YES"`，`false`の時に`"NO"`を出力します．  
+`Yn(condition)`は`"Yes" "No"`を出力．  
+`yn(condition)`は`"yes" "no"`を出力．  
+condなんかいらんわ！という時用に`YES` `Yes` `yes` `NO` `No` `no`でそれぞれの文字列を出力します．  
 `case(i)`はCase番号の出力が必要な時に適宜どうぞ．
 
 ---
@@ -90,6 +93,21 @@ out(vec);
 のような出力になります．
 
 `resz(n, ...)`関数で複数のvectorのsizeを同時にresize出来ます．  
+```cpp
+int n;
+vi a, b, c;
+
+in(n);
+resz(n, a, b, c);
+```
+みたいな利用想定．  
+
+`resize(v, ...)`関数で多次元vectorについて一気にresizeできます．(コンストラクタで頭こわれる人向け)  
+```cpp
+vector<vector<vi>> dp;
+resize(dp, 100, 5, 3);
+```
+みたいな利用想定．  
 
 ---
 ### 定数

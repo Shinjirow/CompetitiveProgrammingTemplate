@@ -33,8 +33,16 @@
 #define show(...) cerr<<#__VA_ARGS__<<" = ";_DEBUG(__VA_ARGS__)
 #define showlr(n,l,r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i]<<", ";}cerr<<endl // [l, r)
 
-#define yes puts("Yes")
-#define no puts("No")
+#define YN(condition) puts((condition)?"YES":"NO")
+#define Yn(condition) puts((condition)?"Yes":"No")
+#define yn(condition) puts((condition)?"yes":"no")
+#define YES puts("YES")
+#define Yes puts("Yes")
+#define yes puts("yes")
+#define NO  puts("NO")
+#define No  puts("No")
+#define no  puts("no")
+
 #define case(i) printf("Case #%lld: ",i)
 
 using namespace std;
@@ -57,6 +65,9 @@ template<typename H,typename... T> void out(H a, T... b){cout<<a<<(sizeof...(b)?
 
 template<class T> void resz(int n,T& v){v.resize(n);}
 template<class H,class... T> void resz(int n,H& a,T&... b){a.resize(n);resz(n,b...);}
+
+template<typename V,typename H> void resize(vector<V>& v,const H a){v.resize(a);}
+template<typename V,typename H,typename... T> void resize(vector<V>& v,const H& a,const T... b){v.resize(a);for(auto &v:v) resize(v,b...);}
 
 const int INF=1LL<<55;
 const int MOD=1000000007;

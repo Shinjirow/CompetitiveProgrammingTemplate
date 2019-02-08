@@ -1,0 +1,26 @@
+language: cpp
+
+branches:
+  only:
+    - master
+    - develop
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode10.1
+      env:
+        - MATRIX_EVAL="CXX=clang++ && CXXFLAGS=-std=c++14"
+
+    - os: osx
+      osx_image: xcode10.1
+      env:
+        - MATRIX_EVAL="brew install gcc5 && CXX=g++-5 && CXXFLAGS=-std=gnu++1y"
+
+before_install:
+    - eval "${MATRIX_EVAL}"
+
+script:
+    - ${CXX} --version
+    - ${CXX} ${CXXFLAGS} -o a.out main.cc && ./a.out
+
