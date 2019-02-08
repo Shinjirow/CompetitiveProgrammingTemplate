@@ -10,17 +10,17 @@ matrix:
     - os: osx
       osx_image: xcode10.1
       env:
-        - MATRIX_EVAL="CXX=clang++ && CXXFLAGS=-std=c++14 && TARGET=a.out"
+        - MATRIX_EVAL="CXX=clang++ && CXXFLAGS=-std=c++14"
 
     - os: osx
-      osx_image: xcode8
+      osx_image: xcode10.1
       env:
-        - MATRIX_EVAL="CXX=g++-5 && CXXFLAGS=-std=gnu++1y && TARGET=a.out"
+        - MATRIX_EVAL="brew install gcc5 && CXX=g++-5 && CXXFLAGS=-std=gnu++1y"
 
 before_install:
-   - eval "${MATRIX_EVAL}"
+    - eval "${MATRIX_EVAL}"
 
 script:
-    ${CXX} ${CXXFLAGS} -o ${TARGET} main.cc
-    ./{TARGET}
+    - ${CXX} --version
+    - ${CXX} ${CXXFLAGS} -o a.out main.cc && ./a.out
 
