@@ -1,6 +1,8 @@
 # cptemp
 competitive programming template
 
+[![Build Status](https://travis-ci.org/Shinjirow/cptemp.svg?branch=master)](https://travis-ci.org/Shinjirow/cptemp)
+
 ---
 
 ## おしながき  
