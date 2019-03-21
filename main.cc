@@ -21,6 +21,7 @@
 #include <tuple>
 #include <iomanip>
 
+
 #define int long long
 #define REP(i,l,r) REPEAT(i,l,r,true) // [l, r)
 #define rep(i,n) REP(i,0,n)           // [0, n)
@@ -30,8 +31,13 @@
 #define pb push_back
 #define fs first
 #define sc second
+#ifdef LOCAL
 #define show(...) cerr<<#__VA_ARGS__<<" = ";_DEBUG(__VA_ARGS__)
 #define showlr(n,l,r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i]<<", ";}cerr<<endl // [l, r)
+#else
+#define show(...)
+#define showlr(n,l,r)
+#endif
 
 #define YN(condition) puts((condition)?"YES":"NO")
 #define Yn(condition) puts((condition)?"Yes":"No")
@@ -72,6 +78,7 @@ template<typename V,typename H,typename... T> void resize(vector<V>& v,const H& 
 const int INF=1LL<<55;
 const int MOD=1000000007;
 const double EPS=1e-8;
+/*------------end of definitions------------*/
 
 
 
