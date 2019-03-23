@@ -35,6 +35,9 @@ rep(y,height){
 `showlr(n,l,r)`関数はvectorの後半がまだ未使用で0だらけの時などにお使いください．  
 [l, r)の空間のforループで順番に出力します．
 
+上のどちらも，ジャッジのマシンで出力しないように，`-DLOCAL`オプションをつけてコンパイルしないと動きません．  
+(AOJのマシンcerrするとREになるので)
+
 #### 出力系
 `YN(condition)`関数は`condition`が`true`の時に`"YES"`，`false`の時に`"NO"`を出力します．  
 `Yn(condition)`は`"Yes" "No"`を出力．  
