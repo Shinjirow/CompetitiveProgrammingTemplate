@@ -1,4 +1,3 @@
-//#include "bits/stdc++.h"
 #include <iostream>
 #include <vector>
 #include <map>
@@ -23,17 +22,17 @@
 
 
 #define int long long
-#define REP(i,l,r) REPEAT(i,l,r,true) // [l, r)
-#define rep(i,n) REP(i,0,n)           // [0, n)
-#define REPEAT(i,l,r,condition) for(int i=(condition)?l:r-1;(condition)?i<r:i>=l;(condition)?++i:--i) // false<-[l, r)->true
+#define REP(i, l, r) REPEAT(i,l,r,true) // [l, r)
+#define rep(i, n) REP(i,0,n)           // [0, n)
+#define REPEAT(i, l, r, condition) for(int i=(condition)?l:r-1;(condition)?i<r:i>=l;(condition)?++i:--i) // false<-[l, r)->true
 #define all(e) e.begin(),e.end()
 #define rall(e) e.rbegin(),e.rend()
-#define pb push_back
+#define pb emplace_back
 #define fs first
 #define sc second
 #ifdef LOCAL
 #define show(...) cerr<<#__VA_ARGS__<<" = ";_DEBUG(__VA_ARGS__)
-#define showlr(n,l,r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i]<<", ";}cerr<<endl // [l, r)
+#define showlr(n, l, r) cerr<<#n<<" = ";for(int i=l;i<r;i++){cerr<<n[i]<<", ";}cerr<<endl // [l, r)
 #else
 #define show(...)
 #define showlr(n,l,r)
@@ -54,36 +53,82 @@
 using namespace std;
 
 using vi=vector<int>;
-using pint=pair<int,int>;
+using pint=pair<int, int>;
 
-struct io{io(){cin.tie(0);ios::sync_with_stdio(false);cout.tie(0);cout<<fixed<<setprecision(20);}}io;
+struct io {
+    io() {
+        cin.tie(nullptr);
+        ios::sync_with_stdio(false);
+        cout.tie(nullptr);
+        cout << fixed << setprecision(20);
+    }
+} fastIO;
 
-template<class T> istream& operator >>(istream &is, vector<T> &v){for(T &e:v)is>>e;return is;}
-template<class T> ostream& operator <<(ostream &os, vector<T> v){os<<"{";for(T &e:v)os<<e<<(v.size()-(int)(&e-&v[0])>1?", ":"");os<<"}";return os;}
+template<class T>
+istream &operator>>(istream &is, vector<T> &v) {
+    for (T &e:v)is >> e;
+    return is;
+}
 
-void _DEBUG(){}
-template<typename H,typename... T> void _DEBUG(H a,T...b){cerr<<a<<(sizeof...(b)?",":"\n");_DEBUG(b...);}
+template<class T>
+ostream &operator<<(ostream &os, vector<T> v) {
+    os << "{";
+    for (T &e:v)os << e << (v.size() - (int) (&e - &v[0]) > 1 ? ", " : "");
+    os << "}";
+    return os;
+}
 
-inline void in(){}
-template<typename H,typename... T>void in(H &a, T&... b){cin>>a;in(b...);}
-inline void out(){}
-template<typename H,typename... T> void out(H a, T... b){cout<<a<<(sizeof...(b)?" ":"\n");out(b...);}
+void _DEBUG() {}
 
-template<class T> void resz(int n,T& v){v.resize(n);}
-template<class H,class... T> void resz(int n,H& a,T&... b){a.resize(n);resz(n,b...);}
+template<typename H, typename... T>
+void _DEBUG(H a, T...b) {
+    cerr << a << (sizeof...(b) ? "," : "\n");
+    _DEBUG(b...);
+}
 
-template<typename V,typename H> void resize(vector<V>& v,const H a){v.resize(a);}
-template<typename V,typename H,typename... T> void resize(vector<V>& v,const H& a,const T... b){v.resize(a);for(auto &v:v) resize(v,b...);}
+inline void in() {}
 
-const int INF=1LL<<55;
-const int MOD=1000000007;
-const double EPS=1e-8;
+template<typename H, typename... T>
+void in(H &a, T &... b) {
+    cin >> a;
+    in(b...);
+}
+
+inline void out() {}
+
+template<typename H, typename... T>
+void out(H a, T... b) {
+    cout << a << (sizeof...(b) ? " " : "\n");
+    out(b...);
+}
+
+template<class T>
+void resz(int n, T &v) { v.resize(n); }
+
+template<class H, class... T>
+void resz(int n, H &a, T &... b) {
+    a.resize(n);
+    resz(n, b...);
+}
+
+template<typename V, typename H>
+void resize(vector<V> &v, const H a) { v.resize(a); }
+
+template<typename V, typename H, typename... T>
+void resize(vector<V> &v, const H &a, const T... b) {
+    v.resize(a);
+    for (auto &v:v) resize(v, b...);
+}
+
+const int INF = 1LL << 55;
+const int MOD = 1000000007;
+const double EPS = 1e-8;
+
 /*------------end of definitions------------*/
 
 
 
-signed main(){
-
+signed main() {
 
 
     return 0;
